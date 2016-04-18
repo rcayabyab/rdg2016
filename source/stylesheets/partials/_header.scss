@@ -1,8 +1,9 @@
 header {
 	position: fixed;
+	z-index: +1;
 	padding-top: 15px;
 	padding-bottom : 15px;
-	background: $dark-blue;
+	background: rgba($dark-blue, 0);
 	.logo {
 		display: inline-block;
 		width: 78px;
