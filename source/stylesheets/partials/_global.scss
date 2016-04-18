@@ -112,35 +112,35 @@ $black: #333;
 }
 
 // IMAGES
-// $sprite: image-url("sprite.svg");
-// $sprite-fallback: image-url('sprite.png');
-// $sprite-size: 500px 2103px;
+$sprite: image-url("sprite.svg");
+$sprite-fallback: image-url('sprite.png');
+$sprite-size: 500px 2103px;
 
-// @mixin sprite-hover($idle-x, $position-y, $hover-x) {
-//   background-image: $sprite;
-//   background-size: $sprite-size !important;
-//   background-position: $idle-x $position-y;
-//   background-repeat: no-repeat;
-//   @include transition-duration(0);
-//   .no-svg & {
-//     background-image: $sprite-fallback;
-//   }
-//   &:hover {
-//     background-position: $hover-x $position-y;
-//   }   
-// }
+@mixin sprite-hover($idle-x, $position-y, $hover-x) {
+  background-image: $sprite;
+  background-size: $sprite-size !important;
+  background-position: $idle-x $position-y;
+  background-repeat: no-repeat;
+  @include transition-duration(0);
+  .no-svg & {
+    background-image: $sprite-fallback;
+  }
+  &:hover {
+    background-position: $hover-x $position-y;
+  }   
+}
 
-// @mixin img-content($img-x, $img-y) {
-//   content: ' ';
-//   background-image: $sprite;
-//   background-size: $sprite-size !important;
-//   background-position: $img-x $img-y;
-//   background-repeat: no-repeat;
-//   @include hide-text;
-//   .no-svg & {
-//     background-image: $sprite-fallback;
-//   }
-// }
+@mixin img-content($img-x, $img-y) {
+  content: ' ';
+  background-image: $sprite;
+  background-size: $sprite-size !important;
+  background-position: $img-x $img-y;
+  background-repeat: no-repeat;
+  @include hide-text;
+  .no-svg & {
+    background-image: $sprite-fallback;
+  }
+}
 
 // FLEXBOX http://css-tricks.com/snippets/css/a-guide-to-flexbox/
 @mixin flexbox() {
@@ -237,6 +237,6 @@ $black: #333;
 // OTHER STYLES
 
 @include selection {
-  // background: $blue;
-  // color: $white;
+  background: $dark-orange;
+  color: $white;
 }

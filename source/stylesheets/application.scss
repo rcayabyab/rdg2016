@@ -1,9 +1,12 @@
 // ------------------------------------------ VENDOR
 @import 'compass';
 @import 'compass/reset';
+@import 'partials/flexslider';
 
 // ------------------------------------------ PARTIALS
 @import 'partials/global';
 @import 'partials/fonts';
 @import 'partials/typography';
 @import 'partials/wireframe';
+@import 'partials/forms';
+@import 'partials/tables';
