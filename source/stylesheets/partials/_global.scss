@@ -86,7 +86,7 @@ $black: #333;
 }
 
 @mixin animate-object {
-  @include transition-duration(.3s);
+  @include transition-duration(.4s);
 }
 
 @mixin aspect-ratio($width, $height) { // aspect-ratio(16, 9);
@@ -114,7 +114,7 @@ $black: #333;
 // IMAGES
 $sprite: image-url("sprite.svg");
 $sprite-fallback: image-url('sprite.png');
-$sprite-size: 500px 2103px;
+$sprite-size: 300px 1453px;
 
 @mixin sprite-hover($idle-x, $position-y, $hover-x) {
   background-image: $sprite;
@@ -239,4 +239,11 @@ $sprite-size: 500px 2103px;
 @include selection {
   background: $dark-orange;
   color: $white;
+}
+
+@mixin hover-fade {
+  opacity: 1;
+  &:hover {
+    opacity: .8;
+  }
 }

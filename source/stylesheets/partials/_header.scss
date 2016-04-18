@@ -1,0 +1,30 @@
+header {
+	position: fixed;
+	padding-top: 15px;
+	padding-bottom : 15px;
+	background: $dark-blue;
+	.logo {
+		display: inline-block;
+		width: 78px;
+		height: 50px;
+		@include img-content(-20px, -20px);
+		@include hover-fade;
+	}
+	ul {
+		float: right;
+		li {
+			display: inline-block;
+			margin: 0;
+			a {
+				display: block;
+				@include font-size(18);
+				color: $white;
+				padding: 10px 15px;
+				&:hover {
+					background-color: $white;
+					color: $dark-blue;
+				}
+			}
+		}
+	}
+}
