@@ -1,0 +1,65 @@
+@mixin site-width {
+  max-width: 960px;
+  padding: 0 5%;
+  margin: 0 auto;
+  @include box-sizing(border-box);
+}
+
+@mixin full-width { //overrides site width for full bleed
+    width: 100%;
+    padding: 0 5%;
+    margin: 0 auto;
+    @include box-sizing(border-box);
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  height: 100%;
+  background: $white;
+}
+
+.menu-helper {
+  width: 100%;
+  overflow-x: hidden !important;
+  &.no-scroll {
+    overflow-: hidden !important;
+    position: fixed;
+  }
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  
+}
+
+footer {
+
+}
+
+aside {
+}
+
+.main {
+  max-width: 960px;
+  padding: 0 0;
+  @include box-sizing(border-box);
+  margin: 0 5%;
+  @include respond-to(large) {
+    margin: 0 auto;
+  }
+}
+
+section {
+
+}
+
