@@ -7,12 +7,144 @@ section.hero {
 	background-position: center center;
 	h4 {
 		position: absolute;
-		top: 50%;
+		top: calc(50% - 65px);
 	  left: 50%;
 	  transform: translate(-50%, -50%);
 		max-width: 680px;
 		text-align: center;
 		color: $white;
 		font-weight: normal;
+	}
+}
+
+section.what-we-do {
+	position: relative;
+	margin-top: -150px;
+	ul {
+		@include flexbox();
+		@include flex-flow(row wrap);
+		li {
+			@include flex(0 0 320px);
+			width: 320px;
+			height: 320px;
+			list-style: none;
+			margin: 0;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+				color: $white;
+				&.case-study {
+					.content {
+						position: relative;
+						width: 100%;
+						height: 100%;
+						background: image-url('case-study-link-overlay.png') center bottom repeat-x;
+						@include animate-object;
+						.title {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							padding: 15px;
+							h5 {
+								display: inline-block;
+								vertical-align: middle;
+								opacity: 1;
+								.client {
+									display: block;
+									text-transform: normal;
+									line-height: 5px;
+								}
+								.category {
+									text-transform: uppercase;
+									font-size: 15px;
+									font-weight: normal;
+									line-height: 0;
+								}
+							}
+							&:before {
+								display: inline-block;
+								vertical-align: middle;
+								float: left;
+								margin-right: 5px;
+								font-family: $font-icon;
+								font-size: 33px;
+							}
+							&:after {
+								display: inline-block;
+								vertical-align: middle;
+								float: right;
+								font-family: $font-icon;
+								content: "\e905";
+								font-size: 23px;
+							}
+							&.strategy {
+								&:before {
+									content: "\e908";
+								}
+							}
+							&.design {
+								&:before {
+									content: "\e909";
+								}
+							}
+							&.digital {
+								&:before {
+									content: "\e90a";
+								}
+							}
+							&.environment {
+								&:before {
+									content: "\e90b";
+								}
+							}
+						}
+						.description {
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							padding: 15px;
+							opacity: 0;
+							@include animate-object;
+							p {
+								@include font-size(17);
+								color: $white;
+							}
+						}
+					}
+					&:hover {
+						.content {
+							background-image: none;
+							background-color: rgba($med-orange, .8);
+							.title {
+								h5 {
+									opacity: 0;
+								}
+								&:before {
+									font-family: $font-sans;
+									font-size: 15px;
+									text-transform: uppercase;
+									content: "Learn More" !important;
+								}
+								&:after {
+									content: "\e904";
+								}
+							}	
+							.description {
+								opacity: 1;
+							}
+						}
+					}
+				} // END .CASESTUDY
+				&.client {
+					background-color: $light-grey;
+				}
+			}
+		}
 	}
 }

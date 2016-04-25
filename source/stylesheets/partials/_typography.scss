@@ -1,5 +1,5 @@
-$font-sans: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-slab: 'Roboto Slab', Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+$font-sans: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+$font-slab: 'Roboto Slab', Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif !important;
 $font-icon: 'icomoon' !important;
 
 html {
@@ -51,8 +51,10 @@ h1 {
 }
 
 h2 {
+  font-family: $font-slab;
   @include font-size(36);
-  font-weight: bold;
+  text-align: center;
+  color: $white;
 }
 
 h3 {

@@ -5,11 +5,11 @@
 // ICON FONT
 @font-face {
     font-family: 'icomoon';
-    src:    font-url('icomoon.eot?qwn6iq');
-    src:    font-url('icomoon.eot?qwn6iq#iefix') format('embedded-opentype'),
-        font-url('icomoon.ttf?qwn6iq') format('truetype'),
-        font-url('icomoon.woff?qwn6iq') format('woff'),
-        font-url('icomoon.svg?qwn6iq#icomoon') format('svg');
+    src:    font-url('icomoon.eot?61ak70');
+    src:    font-url('icomoon.eot?61ak70#iefix') format('embedded-opentype'),
+        font-url('icomoon.ttf?61ak70') format('truetype'),
+        font-url('icomoon.woff?61ak70') format('woff'),
+        font-url('icomoon.svg?61ak70#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,6 +29,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-strategy:before {
+    content: "\e908";
+}
+.icon-design:before {
+    content: "\e909";
+}
+.icon-digital:before {
+    content: "\e90a";
+}
+.icon-environment:before {
+    content: "\e90b";
+}
 .icon-triangle-down-closed:before {
     content: "\e900";
 }
