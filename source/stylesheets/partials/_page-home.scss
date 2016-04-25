@@ -20,9 +20,12 @@ section.hero {
 section.what-we-do {
 	position: relative;
 	margin-top: -150px;
+	padding: 0 5%;
 	ul {
 		@include flexbox();
 		@include flex-flow(row wrap);
+		@include vendor-prefix(justify-content, center);
+		margin-top: 15px;
 		li {
 			@include flex(0 0 320px);
 			width: 320px;
@@ -36,7 +39,9 @@ section.what-we-do {
 				background-size: cover;
 				background-position: center center;
 				color: $white;
-				&.case-study {
+			}
+			&.case-study {
+				a {
 					.content {
 						position: relative;
 						width: 100%;
@@ -140,9 +145,42 @@ section.what-we-do {
 							}
 						}
 					}
-				} // END .CASESTUDY
-				&.client {
+				}
+			} // END .CASE-STUDY
+			&.client {
+				a {
 					background-color: $light-grey;
+					position: relative;
+					img {
+						max-width: 220px;
+						max-height: 220px;
+						position: absolute;
+					  top: 50%;
+					  left: 50%;
+					  transform: translate(-50%, -50%);
+					  @include image-regular;
+					  opacity: 1;
+					  @include animate-object;
+					  @include respond-to(xlarge) {
+					  	opacity: .5;
+					  	@include image-grayscale;
+					  }
+					}
+					&:hover {
+						img {
+							@include image-regular;
+					  	opacity: 1;
+						}
+					}
+				}
+			}  // END .CLIENT
+			&.portfolio {
+				display: none;
+				a {
+					cursor: default;
+				}
+				@include respond-to(medium) {
+					display: block;
 				}
 			}
 		}
