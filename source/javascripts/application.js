@@ -13,4 +13,21 @@ $(window).load(function() {
 
 $(document).ready(function(){
 
+	// HEADER BACKGROUND CHANGE ON SCROLL
+	var header = $('header');
+	var full = $('section.hero h4');
+	var range = 200; // USE IF YOU WANT A RANGE
+	$(window).on('scroll', function () {
+    var scrollTop = $(this).scrollTop();
+    var offset = full.offset().top;
+    var opac = scrollTop / offset;
+    header.css('background-color', 'rgba(9, 59, 82,' + opac + ')');
+  	// console.log(scrollTop, offset, opac);
+    if ( opac > '1' ) {
+      header.css('background-color', 'rgba(9, 59, 82, 1)');
+    } else if ( opac < '0' ) {
+      header.css('background-color', 'rgba(9, 59, 82, 0)');
+    }
+	});
+
 });
