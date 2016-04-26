@@ -39,10 +39,10 @@ a {
   &:hover {
     color: $dark-orange;
   }
-  &:active {
-    position: relative;
-    top: 1px;
-  }
+  // &:active {
+  //   position: relative;
+  //   top: 1px;
+  // }
 }
 
 h1 {

@@ -15,11 +15,12 @@
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag  "modernizr" %>
+    <%= javascript_include_tag  "application" %>
   </head>
 
   <body class="<%= page_classes %>">
     <%= partial "header" %>
     <%= yield %>
-    <%= javascript_include_tag  "application" %>
+    
   </body>
 </html>

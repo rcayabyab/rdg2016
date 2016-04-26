@@ -1,7 +1,14 @@
 //= require "_jquery-1.12.0.min"
-
+//= require "_jquery.flexslider"
 
 $(window).load(function() {
+
+	// FLEXSLIDER
+	$('.flexslider').flexslider({
+    animation: "slide",
+    slideshow: false,  
+    animationLoop: false
+  });
 
 	//SVG FALLBACK
 	if (!Modernizr.svg) {
@@ -9,12 +16,14 @@ $(window).load(function() {
 	    .attr("src", fallback);
 	}
 
+	
+
 });
 
 $(document).ready(function(){
 
 	// HEADER BACKGROUND CHANGE ON SCROLL
-	var header = $('header');
+	var header = $('body > header');
 	var full = $('section.hero h4');
 	var range = 250; // USE IF YOU WANT A RANGE
 	$(window).on('scroll', function () {
