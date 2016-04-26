@@ -20,6 +20,7 @@ section.hero {
 section.what-we-do {
 	position: relative;
 	margin-top: -150px;
+	margin-bottom: -90px;
 	padding: 0 5%;
 	ul {
 		@include flexbox();
@@ -181,6 +182,34 @@ section.what-we-do {
 				}
 				@include respond-to(medium) {
 					display: block;
+				}
+			}
+		}
+	}
+}
+
+section.this-is-how-we-do-it {
+	padding: 180px 0 90px 0;
+	background: $dark-blue image-url('how-we-do-it-overlay.png') center center repeat;
+	ul {
+		li {
+			width: 100%;
+			height: 590px;
+			margin: 0;
+			background-position: center center;
+			background-repeat: no-repeat;
+			&.discover {
+				background-image: image-url('how-we-do-discover.svg');
+			}
+			.main {
+				position: relative;
+				height: 100%;
+				p {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					max-width: 430px;
+					color: $white;
 				}
 			}
 		}
