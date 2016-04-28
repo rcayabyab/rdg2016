@@ -130,3 +130,57 @@ section.creative-nuggets {
 		}
 	}
 }
+
+section.info {
+	position: relative;
+	padding: 60px 0 240px;
+	background-color: $green;
+	background-image: image-url('artie.svg');
+	background-size: 186px 210px !important;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	color: $white;
+	@include font-size(18);
+	@include clear-float;
+	@include respond-to(xsmall) {
+		padding: 60px 0;
+		background-position: center center;
+	}
+	.no-svg & {
+	  background-image: image-url('artie.png');
+	}
+	.to-top {
+		display: block;
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		top: -30px;
+		left: 50%;
+		margin-left: -30px;
+		background-color: $light-teal;
+		@include img-content(-1px, -819px);
+		@include transition-duration(0s);
+		&:hover {
+			@include img-content(-61px, -819px);
+		}
+	}
+	nav {
+		float: left;
+		ul {
+			li {
+				margin: 0;
+				list-style: none;
+				a {
+					color: $white;
+					&:hover {
+						color: $dark-blue;
+					}
+				}
+			}
+		}
+	}
+	.contact-info {
+		float: right;
+		text-align: right;
+	}
+}
