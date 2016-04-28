@@ -238,6 +238,12 @@ section.what-we-focus-on {
 				@include flex(1 1 45%);
 				margin: 15px;
 				list-style: none;
+				&:first-child {
+					margin-left: 15px;
+				}
+				&:last-child {
+					margin-right: 15px;
+				}
 				@include respond-to(medium) {
 					@include flex(1 1 auto);
 					&:first-child {
@@ -246,12 +252,6 @@ section.what-we-focus-on {
 					&:last-child {
 						margin-right: 0;
 					}
-				}
-				&:first-child {
-					margin-left: 15px;
-				}
-				&:last-child {
-					margin-right: 15px;
 				}
 				&:before {
 					display: block;
@@ -293,6 +293,131 @@ section.what-we-focus-on {
 							margin-left: 0;
 							list-style-position: outside;
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+blockquote {
+	background: $light-teal;
+	padding: 90px 0;
+	color: $white;
+	h2 {
+		text-align: left;
+	}
+	p.person {
+		text-align: right;
+		@include font-size(24);
+		color: $white;
+		&:before {
+			content: "—";
+			margin: 5px;
+		}
+	}
+}
+
+section.stream {
+	padding: 90px 0 0;
+	h2 {
+		color: $dark-orange;
+	}
+	ul {
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@include vendor-prefix(justify-content, center);
+		margin-top: 15px;
+		li {
+			@include flex(0 0 320px);
+			@include box-sizing(border-box);
+			position: relative;
+			width: 320px;
+			height: 320px;
+			padding: 15px;
+			list-style: none;
+			margin: 0;
+			color: $white;
+			@include font-size(17);
+			&.facebook {
+				background: $teal;
+			}
+			&.instagram {
+				background-size: cover;
+				background-position: center center;
+			}
+			&.twitter {
+				background: $green;
+			}
+			&.fieldnotes {
+				background-size: cover;
+				background-position: center center;
+				z-index: 0;
+				.overlay {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 0;
+				}
+			}
+			&:nth-child(4) {
+				.overlay {
+					background: rgba($dark-orange, .7);
+				}
+			}
+			&:nth-child(5) {
+				display: none;
+				.overlay {
+					background: rgba($dark-blue, .7);
+				}
+				@include respond-to(medium) {
+					display: block;
+				}
+			}
+			&:nth-child(6) {
+				display: none;
+				.overlay {
+					background: rgba($light-teal, .7);
+				}
+				@include respond-to(medium) {
+					display: block;
+				}
+			}
+			h6 {
+				position: relative;
+				font-family: $font-slab;
+				font-weight: bold;
+				&.title {
+					margin-top: 15px;
+					font-family: $font-sans;
+				}
+			}
+			p {
+				position: relative;
+				@include font-size(17);
+				color: $white;
+			}
+			a {
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 15px;
+				color: $white;
+				@include font-size(15);
+				text-transform: uppercase;
+				&:after {
+					float: right;
+					font-family: $font-icon;
+					content: "\e905";
+					font-size: 22px;
+				}
+				&:hover {
+					&:after {
+						content: "\e904";
 					}
 				}
 			}
