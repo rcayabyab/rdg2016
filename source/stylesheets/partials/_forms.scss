@@ -28,7 +28,6 @@ form {
     -moz-appearance: none;
     @include box-sizing(border-box);
     @include anti-alias;
-    @include border-radius(5px);
     @include input-placeholder {
       // color: $grey;
       font-style: italic;
@@ -63,7 +62,6 @@ form {
         display: inline-block !important;
         vertical-align: middle;
         cursor: pointer;
-        @include border-radius(0);
         @include img-content(-20px, -930px);
       }
       input:checked + span {
@@ -85,7 +83,6 @@ form {
         cursor: pointer;
         @include img-content(-20px, -590px);
         background-color: transparent;
-        @include border-radius(0);
       }
       input:checked + span {
         @include img-content(-20px, -650px);
@@ -132,7 +129,6 @@ form {
     font-weight: bold;
     opacity: 1;
     white-space: pre-line;
-    @include border-radius(5px);
     @include respond-to(xsmall) {
       width: auto;
     }
@@ -154,7 +150,6 @@ form {
     cursor: pointer;
     // @include img-content(-20px, -590px);
     // background-color: transparent;
-    // // @include border-radius(0);
     // // &:checked {
     // //   @include img-content(-20px, -650px);
     // // }
@@ -167,7 +162,6 @@ form {
     display: inline-block !important;
     vertical-align: middle;
     cursor: pointer;
-    // @include border-radius(0);
     // @include img-content(-20px, -700px);
     // &:checked {
     //   @include img-content(-20px, -750px);
