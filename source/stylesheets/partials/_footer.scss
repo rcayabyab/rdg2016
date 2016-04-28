@@ -111,12 +111,22 @@ section.creative-nuggets {
 	background: $dark-blue;
 	form {
 		@include flexbox();
-		@include flex-flow(row nowrap);
+		@include flex-flow(column nowrap);
+		margin: 15px 0 0;
+		input {
+			margin: 0;
+		}
 		input[type="text"] {
 			@include flex(1 1 auto);
 		}
 		input[type="submit"] {
-			@include flex(0 0 auto);
+			@include flex(1 1 auto);
+		}
+		@include respond-to(xsmall) {
+			@include flex-flow(row nowrap);
+			input[type="submit"] {
+				@include flex(0 0 auto);
+			}
 		}
 	}
 }

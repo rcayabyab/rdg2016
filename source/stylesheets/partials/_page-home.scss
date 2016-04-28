@@ -305,7 +305,10 @@ blockquote {
 	padding: 90px 0;
 	color: $white;
 	h2 {
-		text-align: left;
+		text-align: center;
+		@include respond-to(small) {
+			text-align: left;
+		}
 	}
 	p.person {
 		text-align: right;
