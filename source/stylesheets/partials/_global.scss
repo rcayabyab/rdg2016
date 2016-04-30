@@ -265,3 +265,16 @@ $sprite-size: 300px 1453px;
     opacity: .8;
   }
 }
+
+.large-photo {
+  @include aspect-ratio(1200, 675);
+  .content {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.small-photo {
+  @include aspect-ratio(1200, 456);
+}

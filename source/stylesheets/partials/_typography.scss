@@ -113,6 +113,27 @@ ol {
   }
 }
 
+blockquote {
+  background: $light-teal;
+  padding: 90px 0;
+  color: $white;
+  h2 {
+    text-align: center;
+    @include respond-to(small) {
+      text-align: left;
+    }
+  }
+  p.person {
+    text-align: right;
+    @include font-size(24);
+    color: $white;
+    &:before {
+      content: "—";
+      margin: 5px;
+    }
+  }
+}
+
 .button {
   padding: 15px 35px;
   font-weight: bold;

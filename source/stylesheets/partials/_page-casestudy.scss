@@ -1,0 +1,39 @@
+section.basic-info {
+	padding: 120px 0 60px;
+	background: $slate;
+	text-align: center;
+	color: $white;
+	h4 {
+		font-weight: normal;
+	}
+}
+
+section.challenge,
+section.solution {
+	padding: 60px;
+	h2 {
+		color: $slate;
+	}
+	.main {
+		@include column-count(2);
+		@include vendor-prefix(column-gap, 60px);
+		p {
+			-webkit-column-break-inside:avoid;
+	    -moz-column-break-inside:avoid;
+	    -o-column-break-inside:avoid;
+	    -ms-column-break-inside:avoid;
+	    column-break-inside:avoid;
+		  page-break-inside: avoid;
+		  break-inside: avoid;
+		  display: table;
+		}
+	}
+}
+
+section.csimages-twowide {
+	@include flexbox();
+	@include flex-flow(row nowrap);
+	div {
+		@include flex(1 1 50%);
+	}
+}
