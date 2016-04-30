@@ -131,7 +131,7 @@ section.creative-nuggets {
 	}
 }
 
-section.info {
+section.main-info {
 	position: relative;
 	padding: 60px 0 240px;
 	background-color: $green;
@@ -182,5 +182,90 @@ section.info {
 	.contact-info {
 		float: right;
 		text-align: right;
+	}
+}
+
+section.second-info {
+	background: $light-green;
+	color: $white;
+	.main {
+		@include flexbox();
+		@include flex-flow(column nowrap);
+		@include vendor-prefix(align-items, center);
+		padding: 30px 0;
+		@include respond-to(medium) {
+			@include flex-flow(row nowrap);
+			padding: 0;
+		}
+		.legal {
+			@include flex(1 1 50%);
+			@include order(3);
+			@include respond-to(medium) {
+				@include order(1);
+			}
+		}
+		nav.social {
+			@include flex(0 0 auto);
+			@include order(2);
+			margin: 30px 0;
+			@include respond-to(medium) {
+				margin: 0;
+			}
+			ul {
+				@include flexbox();
+				li {
+					@include flex(1 1 auto);
+					margin: 0 15px;
+					list-style: none;
+					@include respond-to(medium) {
+						margin: 0;
+					}
+					a {
+						display: block;
+						width: 50px;
+						height: 50px;
+						opacity: 1;
+						&:hover {
+							opacity: .6;
+						}
+						&.linkedin {
+							@include img-content(-20px, -1030px);
+						}
+						&.instagram {
+							@include img-content(-20px, -1120px);
+						}
+						&.twitter {
+							@include img-content(-20px, -1210px);
+						}
+						&.facebook {
+							@include img-content(-20px, -1300px);
+						}
+					}
+				}
+			}
+		}
+		.lets-connect {
+			@include flex(1 1 50%);
+			@include order(1);
+			text-align: right;
+			@include respond-to(medium) {
+				@include order(3);
+			}
+			a {
+				color: $white;
+				@include font-size(18);
+				font-weight: bold;
+				opacity: 1;
+				&:hover {
+					opacity: .6;
+				}
+				&:after {
+					font-family: $font-icon;
+					content: "\e905";
+					margin-left: 10px;
+
+				}
+			}
+		}
 	}
 }
