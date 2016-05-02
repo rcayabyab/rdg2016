@@ -10,13 +10,16 @@ section.basic-info {
 
 section.challenge,
 section.solution {
-	padding: 60px;
+	padding: 60px 0;
 	h2 {
 		color: $slate;
 	}
 	.main {
-		@include column-count(2);
-		@include vendor-prefix(column-gap, 60px);
+		@include column-count(1);
+		@include vendor-prefix(column-gap, 40px);
+		@include respond-to(small) {
+			@include column-count(2);
+		}
 		p {
 			-webkit-column-break-inside:avoid;
 	    -moz-column-break-inside:avoid;
@@ -32,8 +35,11 @@ section.solution {
 
 section.csimages-twowide {
 	@include flexbox();
-	@include flex-flow(row nowrap);
+	@include flex-flow(column nowrap);
 	div {
 		@include flex(1 1 50%);
+	}
+	@include respond-to(medium) {
+		@include flex-flow(row nowrap);
 	}
 }
