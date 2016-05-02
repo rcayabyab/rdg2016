@@ -37,7 +37,7 @@ $(document).ready(function(){
 	});
 
 	// HEADER BACKGROUND CHANGE ON SCROLL
-	var header = $('body > header');
+	var header = $('body > .menu-helper > header');
 	// var full = $('section.hero h4');
 	var range = 250; // USE IF YOU WANT A RANGE
 	$(window).on('scroll', function () {
@@ -51,6 +51,14 @@ $(document).ready(function(){
     } else if ( opac < '0' ) {
       header.css('background-color', 'rgba(9, 59, 82, 0)');
     }
+	});
+
+	// HAMBURGER MENU
+	$('header nav .hamburger').click(function(e) {
+	  e.preventDefault();
+	  $('.menu-helper').toggleClass('no-scroll');
+	  $('header nav ul').toggleClass('active');
+	  $(this).toggleClass('active');
 	});
 
 });
