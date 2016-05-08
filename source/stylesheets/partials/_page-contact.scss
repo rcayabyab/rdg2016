@@ -1,0 +1,110 @@
+section.contact-header {
+	position: relative;
+	padding: 120px 0 60px;
+	background: $dark-blue;
+	color: $white;
+	text-align: center;
+	img {
+		display: block;
+		max-width: 680px;
+		margin: 0 auto 30px;
+	}
+	h5 {
+		font-weight: normal;
+	}
+}
+
+section.contact-form {
+	padding: 30px 0;
+	background: $dark-blue;
+	form {
+		@include clear-float;
+		.required {
+			font-style: italic;
+			font-weight: bold;
+			color: $white;
+		}
+		.split {
+			@include flexbox();
+			@include flex-flow(column nowrap);
+			input {
+				@include flex(1 1 50%);
+				margin: 15px 0;
+			}
+			@include respond-to(small) {
+				@include flex-flow(row nowrap);
+				input {
+					&:first-child {
+						margin: 15px 15px 15px 0;
+					}
+					&:last-child {
+						margin: 15px 0 15px 15px;
+					}
+				}
+			}
+		}
+		textarea {
+			width: 100%;
+			height: 120px;
+		}
+		input[type=submit] {
+			width: 100%;
+			margin-top: 15px;
+			float: right;
+			@include respond-to(small) {
+				width: auto;
+			}
+		}
+	}
+}
+
+section.contact-address {
+	background: $dark-blue;
+	text-align: center;
+	h5 {
+		position: relative;
+		font-weight: normal;
+		font-style: italic;
+		color: $white;
+		margin-bottom: 15px;
+		.triangle {
+			position: absolute;
+			left: 50%;
+			transform: translateY(-50%);
+			margin-top: 40px;
+			margin-left: -30px;
+			width: 0; 
+			height: 0; 
+			border-left: 30px solid transparent;
+			border-right: 30px solid transparent;
+			border-top: 50px solid $dark-blue;
+			z-index: 999;
+		}
+	}
+}
+
+section.contact-phonenumber {
+	background: $dark-blue;
+	padding: 60px 0;
+	text-align: center;
+	h1 {
+		@include font-size(43);
+		font-family: $font-sans;
+		font-style: italic;
+		font-weight: bold;
+		a {
+			color: $green;
+			cursor: default; 
+			&:hover {
+				color: $green;
+			}
+		}
+		@include respond-to(xsmall) {
+			@include font-size(51);
+		}
+	}
+	h3 {
+		font-style: italic;
+		color: $white;
+	}
+}
