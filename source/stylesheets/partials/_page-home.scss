@@ -242,7 +242,7 @@ section.what-we-focus-on {
 				@include flex-flow(row nowrap);
 			}
 			> li {
-				@include flex(1 1 45%);
+				display: block;
 				margin: 15px;
 				list-style: none;
 				&:first-child {
@@ -250,6 +250,9 @@ section.what-we-focus-on {
 				}
 				&:last-child {
 					margin-right: 15px;
+				}
+				@include respond-to(small) {
+					@include flex(1 1 45%);
 				}
 				@include respond-to(medium) {
 					@include flex(1 1 auto);
