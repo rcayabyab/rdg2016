@@ -11,9 +11,16 @@ section.hero {
 	  left: 50%;
 	  transform: translate(-50%, -50%);
 		max-width: 680px;
+		width: 90%;
 		text-align: center;
 		color: $white;
 		font-weight: normal;
+		@include respond-to(small) {
+			width: 80%;
+		}
+		@include respond-to(medium) {
+			width: 56%;
+		}
 	}
 }
 
