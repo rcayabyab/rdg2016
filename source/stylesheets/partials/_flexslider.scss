@@ -100,15 +100,21 @@ html[xmlns] .slides {
 	a {
 		width: 60px; 
 		height: 60px; 
-		margin: -30px 0 0; 
+		margin: 0; 
 		display: block; 
 		position: absolute; 
-		top: 50%; 
+		top: none;
+		bottom: -60px; 
 		cursor: pointer; 
 		text-indent: -9999px; 
 		opacity: 1; 
 		background-color: $light-teal; 
 		@include transition-duration(0s);
+		@include respond-to(medium) {
+			top: 50%; 
+			bottom: none;
+			margin: -30px 0 0; 
+		}
 	}
 	.flex-next {
 		@include img-content(0px, -750px); 

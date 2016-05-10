@@ -204,20 +204,30 @@ section.this-is-how-we-do-it {
 			width: 100%;
 			height: 590px;
 			margin: 0;
+			padding-top: 400px;
 			background-position: center center;
 			background-repeat: no-repeat;
 			&.discover {
 				background-image: image-url('how-we-do-discover.svg');
 			}
+			@include respond-to(medium) {
+				padding-top: 0;
+			}
 			.main {
 				position: relative;
 				height: 100%;
 				p {
-					position: absolute;
+					position: relative;
 					bottom: 0;
+					margin-top: -400px;
 					left: 0;
-					max-width: 430px;
+					max-width: 100%;
 					color: $white;
+					@include respond-to(medium) {
+						position: absolute;
+						margin-top: 7px;
+						max-width: 430px;
+					}
 				}
 			}
 		}
