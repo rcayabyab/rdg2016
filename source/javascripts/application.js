@@ -1,6 +1,42 @@
 //= require "_jquery-1.12.0.min"
 //= require "_jquery.flexslider"
 
+
+//Dynamic Sizing for FlexSlider
+(function() {
+ 
+  var $window = $(window),
+      flexslider = { vars:{} };
+ 
+  function getGridSize() {
+    return (window.innerWidth < 639) ? 1 :
+    			 (window.innerWidth > 640) ? 2 : 2;
+  }
+ 
+  $window.load(function() {
+    $('.more-case-studies').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      itemWidth: 320,
+      itemMargin: 0,
+      controlNav: false,
+      slideshow: false,
+      // customDirectionNav: $(".event-nav a"),
+      minItems: getGridSize(), // use function to pull in initial value
+      maxItems: getGridSize() // use function to pull in initial value
+    });
+  });
+ 
+  // check grid size on resize event
+  $window.resize(function() {
+    var gridSize = getGridSize();
+ 
+    flexslider.vars.minItems = gridSize;
+    flexslider.vars.maxItems = gridSize;
+  });
+}());
+
+
 $(window).load(function() {
 
 	// FLEXSLIDER
@@ -82,3 +118,4 @@ $(document).ready(function(){
 	$('.map.embed-container').on('click', onMapClickHandler);
 
 });
+

@@ -12,6 +12,7 @@ form {
     font-family: $font-sans;
     font-weight: normal;
     @include box-sizing(border-box);
+    @include border-radius(0);
     &[type="submit"] {
       width: auto;
     }
