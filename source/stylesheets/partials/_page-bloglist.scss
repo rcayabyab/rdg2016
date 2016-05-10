@@ -36,7 +36,8 @@ article.blog-list {
 			@include vendor-prefix(align-items, flex-start);
 		}
 		.blog-image {
-			@include flex(1 1 100%);
+			// @include flex(1 1 100%);
+			display: block;
 			margin-right: 0;
 			@include respond-to(small) {
 				@include flex(1 1 50%);
@@ -44,10 +45,12 @@ article.blog-list {
 			}
 		}
 		.blog-info {
-			@include flex(1 1 50%);
+			display: block;
+			// @include flex(1 1 50%);
 			margin-left: 0;
 			@include respond-to(small) {
 				margin-left: 15px;
+				@include flex(1 1 50%);
 			}
 			header {
 				margin: 0 0 10px;
