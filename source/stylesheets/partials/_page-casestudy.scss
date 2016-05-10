@@ -37,7 +37,10 @@ section.csimages-twowide {
 	@include flexbox();
 	@include flex-flow(column nowrap);
 	div {
-		@include flex(1 1 50%);
+		display: block;
+		@include respond-to(medium) {
+			@include flex(1 1 50%);
+		}
 	}
 	@include respond-to(medium) {
 		@include flex-flow(row nowrap);
