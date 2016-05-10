@@ -7,6 +7,7 @@ section.contact-header {
 	img {
 		display: block;
 		max-width: 680px;
+		width: 100%;
 		margin: 0 auto 30px;
 	}
 	h5 {
@@ -28,12 +29,13 @@ section.contact-form {
 			@include flexbox();
 			@include flex-flow(column nowrap);
 			input {
-				@include flex(1 1 50%);
+				display: block;
 				margin: 15px 0;
 			}
 			@include respond-to(small) {
 				@include flex-flow(row nowrap);
 				input {
+					@include flex(1 1 50%);
 					&:first-child {
 						margin: 15px 15px 15px 0;
 					}
