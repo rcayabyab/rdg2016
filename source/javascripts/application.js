@@ -115,7 +115,7 @@ $(document).ready(function(){
 	  that.on('mouseleave', onMapMouseleaveHandler);
 	}
 	// Enable map zooming with mouse scroll when the user clicks the map
-	$('.map.embed-container').on('click', onMapClickHandler);
+	$('.embed-container').on('click', onMapClickHandler);
 
 });
 

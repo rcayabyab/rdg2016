@@ -15,7 +15,6 @@
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag  "modernizr" %>
-    <%= javascript_include_tag  "application" %>
   </head>
 
   <body class="<%= page_classes %>" id="top">
@@ -24,5 +23,6 @@
     <%= yield %>
     <%= partial "footer" %>
   </div>
+  <%= javascript_include_tag  "application" %>
   </body>
 </html>
